@@ -47,6 +47,7 @@
 /* USER CODE BEGIN PM */
 float R_rpm=0;
 float L_rpm=0;
+float Wish_angle = 0;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -117,10 +118,9 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  //dc_motor_on(0,300);
   cnt_flag_t*p_time_flag=get_g_time_flag_addr();
   PidController_t*pid_forward=pid_get_speed_controller();
-  pid_init(pid_forward,35,0.95,0.5,4500);// pid_init(pid_forward,35,0.95,0.5,4500);5mspid����
+  pid_init(pid_forward,85,1.1,0,1500);// pid_init(pid_forward,35,0.95,0.5,4500);5mspid����
  
 
 
@@ -134,12 +134,22 @@ int main(void)
 	 {
 			p_time_flag->t_5_ms_flag=0;
 			tracking_line();
+			int16_t turn_speed = pid_calculate(pid_forward,Wish_angle,get_yaw_atk901(),0,0);
+		  
+//			int16_t motor_L_out=1650-turn_speed;
+//			int16_t motor_R_out=1650+turn_speed;
+//		 
+//			dc_motor_on(motor_L_out,motor_R_out);
+		 
+		 //PidController_t *pid, float target_value, float feedback_value,
+                     // float output_dead_zone, float i_clear_zone
 	 }
 	 if(p_time_flag->t_30_ms_flag){
 		 p_time_flag->t_30_ms_flag = 0;
 		 uint8_t*read_Line=read_Line_state();
-		bsp_usart8_printf("%d,%d,%d,%d,%d,%d,%d,%d\n",read_Line[track_left1],read_Line[track_left2],read_Line[track_left3],read_Line[track_left4],\
+		//bsp_usart8_printf("%d,%d,%d,%d,%d,%d,%d,%d\n",read_Line[track_left1],read_Line[track_left2],read_Line[track_left3],read_Line[track_left4],\
 		 read_Line[track_right4],read_Line[track_right3],read_Line[track_right2],read_Line[track_right1]);
+		 bsp_usart8_printf("%f\n",get_yaw_speed());
 	 }
 
 

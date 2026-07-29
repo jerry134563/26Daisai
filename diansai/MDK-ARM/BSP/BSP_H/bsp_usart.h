@@ -10,5 +10,6 @@
 void bsp_usart_init(void);
 void bsp_usart8_printf(const char *format, ...);
 float get_yaw_atk901(void);
+float get_yaw_speed(void);
 
 #endif

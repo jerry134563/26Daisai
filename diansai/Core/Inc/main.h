@@ -32,7 +32,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+extern float Wish_angle;
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
