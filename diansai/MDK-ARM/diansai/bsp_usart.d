@@ -38,6 +38,7 @@ diansai\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h
 diansai\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h
 diansai\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
 diansai\bsp_usart.o: ../Core/Inc/usart.h
+diansai\bsp_usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 diansai\bsp_usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 diansai\bsp_usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 diansai\bsp_usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

@@ -45,6 +45,7 @@ diansai\line_tracking.o: ./BSP/BSP_H/bsp_timer.h
 diansai\line_tracking.o: ../Core/Inc/tim.h
 diansai\line_tracking.o: ./BSP/BSP_H/bsp_usart.h
 diansai\line_tracking.o: ../Core/Inc/usart.h
+diansai\line_tracking.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 diansai\line_tracking.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 diansai\line_tracking.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 diansai\line_tracking.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
@@ -53,5 +54,6 @@ diansai\line_tracking.o: ./Module/Module_H/dc_motor.h
 diansai\line_tracking.o: ./Module/Module_H/mpu6050.h
 diansai\line_tracking.o: ./ATK_MS6050/atk_ms6050.h
 diansai\line_tracking.o: ./ATK_MS6050/eMPL/inv_mpu.h
+diansai\line_tracking.o: ./Module/Module_H/Emm_V5.h
 diansai\line_tracking.o: ./Alg/ALG_H/ALG_H.h
 diansai\line_tracking.o: ./Alg/ALG_H/pid.h

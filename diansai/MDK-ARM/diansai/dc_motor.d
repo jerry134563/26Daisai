@@ -43,6 +43,7 @@ diansai\dc_motor.o: ./BSP/BSP_H/bsp_timer.h
 diansai\dc_motor.o: ../Core/Inc/tim.h
 diansai\dc_motor.o: ./BSP/BSP_H/bsp_usart.h
 diansai\dc_motor.o: ../Core/Inc/usart.h
+diansai\dc_motor.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 diansai\dc_motor.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 diansai\dc_motor.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 diansai\dc_motor.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

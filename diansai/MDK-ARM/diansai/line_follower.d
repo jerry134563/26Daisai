@@ -43,6 +43,7 @@ diansai\line_follower.o: ./BSP/BSP_H/bsp_timer.h
 diansai\line_follower.o: ../Core/Inc/tim.h
 diansai\line_follower.o: ./BSP/BSP_H/bsp_usart.h
 diansai\line_follower.o: ../Core/Inc/usart.h
+diansai\line_follower.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 diansai\line_follower.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 diansai\line_follower.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 diansai\line_follower.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

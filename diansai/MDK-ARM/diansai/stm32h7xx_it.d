@@ -37,3 +37,5 @@ diansai\stm32h7xx_it.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex
 diansai\stm32h7xx_it.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h
 diansai\stm32h7xx_it.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
 diansai\stm32h7xx_it.o: ../Core/Inc/stm32h7xx_it.h
+diansai\stm32h7xx_it.o: ../Core/Inc/usart.h
+diansai\stm32h7xx_it.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

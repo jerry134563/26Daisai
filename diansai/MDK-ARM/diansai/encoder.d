@@ -43,6 +43,7 @@ diansai\encoder.o: ./BSP/BSP_H/bsp_timer.h
 diansai\encoder.o: ../Core/Inc/tim.h
 diansai\encoder.o: ./BSP/BSP_H/bsp_usart.h
 diansai\encoder.o: ../Core/Inc/usart.h
+diansai\encoder.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 diansai\encoder.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 diansai\encoder.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 diansai\encoder.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

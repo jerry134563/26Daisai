@@ -1,4 +1,3 @@
-/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * @file    usart.h
@@ -7,16 +6,16 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2026 STMicroelectronics.
-  * All rights reserved.
+  * <h2><center>&copy; Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.</center></h2>
   *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
+  * This software component is licensed by ST under BSD 3-Clause license,
+  * the "License"; You may not use this file except in compliance with the
+  * License. You may obtain a copy of the License at:
+  *                        opensource.org/licenses/BSD-3-Clause
   *
   ******************************************************************************
   */
-/* USER CODE END Header */
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __USART_H__
 #define __USART_H__
@@ -30,16 +29,24 @@ extern "C" {
 
 /* USER CODE BEGIN Includes */
 
+#include <stdbool.h>
+//大头步进:
+#define		CMD_LEN		255
+extern __IO bool rxFrameFlag;
+extern __IO uint8_t rxCmd[CMD_LEN];
+extern __IO uint8_t rxCount;
+
 /* USER CODE END Includes */
 
+extern UART_HandleTypeDef huart5;
 extern UART_HandleTypeDef huart7;
-
 extern UART_HandleTypeDef huart8;
 
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
 
+void MX_UART5_Init(void);
 void MX_UART7_Init(void);
 void MX_UART8_Init(void);
 
@@ -53,3 +60,4 @@ void MX_UART8_Init(void);
 
 #endif /* __USART_H__ */
 
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -107,7 +107,6 @@ void Error_Handler(void);
 #define RED8_GPIO_Port GPIOA
 #define LED0_Pin GPIO_PIN_15
 #define LED0_GPIO_Port GPIOA
-
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
@@ -117,3 +116,5 @@ void Error_Handler(void);
 #endif
 
 #endif /* __MAIN_H */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

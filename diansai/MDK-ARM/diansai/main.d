@@ -37,9 +37,9 @@ diansai\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h
 diansai\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h
 diansai\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
 diansai\main.o: ../Core/Inc/dma.h
-diansai\main.o: ../Core/Inc/memorymap.h
 diansai\main.o: ../Core/Inc/tim.h
 diansai\main.o: ../Core/Inc/usart.h
+diansai\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 diansai\main.o: ../Core/Inc/gpio.h
 diansai\main.o: ./BSP/BSP_H/BSP_H.h
 diansai\main.o: ./BSP/BSP_H/bsp_gpio.h
@@ -55,6 +55,7 @@ diansai\main.o: ./Module/Module_H/dc_motor.h
 diansai\main.o: ./Module/Module_H/mpu6050.h
 diansai\main.o: ./ATK_MS6050/atk_ms6050.h
 diansai\main.o: ./ATK_MS6050/eMPL/inv_mpu.h
+diansai\main.o: ./Module/Module_H/Emm_V5.h
 diansai\main.o: ./Alg/ALG_H/pid.h
 diansai\main.o: ./APP/APP_H/line_tracking.h
 diansai\main.o: ./Alg/ALG_H/ALG_H.h

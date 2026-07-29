@@ -16,7 +16,9 @@ void bsp_usart_init(void)
 {
    HAL_UARTEx_ReceiveToIdle_DMA(&huart8, s_rx_buf_u8, UART_RX_BUF_SIZE);
 	 HAL_UARTEx_ReceiveToIdle_DMA(&huart7, s_rx_buf_u7, UART_RX_BUF_SIZE);
-
+	__HAL_UART_CLEAR_IDLEFLAG(&huart5); 											// 清除IDLE标志
+	__HAL_UART_ENABLE_IT(&huart5, UART_IT_IDLE); 							// 使能串UART1 IDLE中断
+  HAL_UART_Receive_DMA(&huart5, (uint8_t *)rxCmd, CMD_LEN); // 开启DMA接收模式
 }
 
 
