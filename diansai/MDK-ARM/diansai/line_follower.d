@@ -8,7 +8,7 @@ diansai\line_follower.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h
 diansai\line_follower.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h
 diansai\line_follower.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h
 diansai\line_follower.o: ../Drivers/CMSIS/Include/core_cm7.h
-diansai\line_follower.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+diansai\line_follower.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 diansai\line_follower.o: ../Drivers/CMSIS/Include/cmsis_version.h
 diansai\line_follower.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 diansai\line_follower.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -16,8 +16,8 @@ diansai\line_follower.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 diansai\line_follower.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h
 diansai\line_follower.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h
 diansai\line_follower.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-diansai\line_follower.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-diansai\line_follower.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\math.h
+diansai\line_follower.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+diansai\line_follower.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 diansai\line_follower.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
 diansai\line_follower.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
 diansai\line_follower.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -43,6 +43,6 @@ diansai\line_follower.o: ./BSP/BSP_H/bsp_timer.h
 diansai\line_follower.o: ../Core/Inc/tim.h
 diansai\line_follower.o: ./BSP/BSP_H/bsp_usart.h
 diansai\line_follower.o: ../Core/Inc/usart.h
-diansai\line_follower.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\string.h
-diansai\line_follower.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-diansai\line_follower.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+diansai\line_follower.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+diansai\line_follower.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+diansai\line_follower.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

@@ -10,7 +10,7 @@ diansai\dc_motor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h
 diansai\dc_motor.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h
 diansai\dc_motor.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h
 diansai\dc_motor.o: ../Drivers/CMSIS/Include/core_cm7.h
-diansai\dc_motor.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+diansai\dc_motor.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 diansai\dc_motor.o: ../Drivers/CMSIS/Include/cmsis_version.h
 diansai\dc_motor.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 diansai\dc_motor.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -18,8 +18,8 @@ diansai\dc_motor.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 diansai\dc_motor.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h
 diansai\dc_motor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h
 diansai\dc_motor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-diansai\dc_motor.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-diansai\dc_motor.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\math.h
+diansai\dc_motor.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+diansai\dc_motor.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 diansai\dc_motor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
 diansai\dc_motor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
 diansai\dc_motor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -43,6 +43,6 @@ diansai\dc_motor.o: ./BSP/BSP_H/bsp_timer.h
 diansai\dc_motor.o: ../Core/Inc/tim.h
 diansai\dc_motor.o: ./BSP/BSP_H/bsp_usart.h
 diansai\dc_motor.o: ../Core/Inc/usart.h
-diansai\dc_motor.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\string.h
-diansai\dc_motor.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-diansai\dc_motor.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+diansai\dc_motor.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+diansai\dc_motor.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+diansai\dc_motor.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

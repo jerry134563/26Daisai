@@ -31,6 +31,10 @@ void bsp_timer_set_counter(TIM_HandleTypeDef*tim,uint16_t counter)
 	{
 		g_time_flag.t_1_ms_count++;
 		g_time_flag.t_1_ms_flag=1;
+		if(g_time_flag.t_1_ms_count%30==0)
+		{
+		  g_time_flag.t_30_ms_flag=1;
+		}
 		if(g_time_flag.t_1_ms_count%10==0)
 		{
 		  g_time_flag.t_10_ms_flag=1;

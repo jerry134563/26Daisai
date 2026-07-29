@@ -1,14 +1,14 @@
 #include "dc_motor.h"
-#define max_pwm_speed 4500
+#define max_pwm_speed 6400
 #define min_pwm_speed 185
-void set_back_gpio(void)
+void set_forward_gpio(void)
 {
       bsp_set_gpio_high(BIN2_GPIO_Port,BIN2_Pin);
 	  bsp_set_gpio_high(AIN1_GPIO_Port,AIN1_Pin);
       bsp_set_gpio_low(BIN1_GPIO_Port,BIN1_Pin);
 	  bsp_set_gpio_low(AIN2_GPIO_Port,AIN2_Pin);
 }
-void set_forward_gpio(void)
+void set_back_gpio(void)
 {
    bsp_set_gpio_high(BIN1_GPIO_Port,BIN1_Pin);
    bsp_set_gpio_high(AIN2_GPIO_Port,AIN2_Pin);

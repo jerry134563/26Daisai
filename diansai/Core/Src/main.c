@@ -122,8 +122,8 @@ int main(void)
   PidController_t*pid_forward=pid_get_speed_controller();
   pid_init(pid_forward,35,0.95,0.5,4500);// pid_init(pid_forward,35,0.95,0.5,4500);5mspid����
  
- // HAL_Delay(6000);
-dc_motor_on(4900,4900);
+
+
 
   while (1)
   {
@@ -132,10 +132,14 @@ dc_motor_on(4900,4900);
     /* USER CODE BEGIN 3 */
 	 if(p_time_flag->t_5_ms_flag)
 	 {
-	   p_time_flag->t_5_ms_flag=0;
-    //  tracking_line();
-		
-		 
+			p_time_flag->t_5_ms_flag=0;
+			tracking_line();
+	 }
+	 if(p_time_flag->t_30_ms_flag){
+		 p_time_flag->t_30_ms_flag = 0;
+		 uint8_t*read_Line=read_Line_state();
+		bsp_usart8_printf("%d,%d,%d,%d,%d,%d,%d,%d\n",read_Line[track_left1],read_Line[track_left2],read_Line[track_left3],read_Line[track_left4],\
+		 read_Line[track_right4],read_Line[track_right3],read_Line[track_right2],read_Line[track_right1]);
 	 }
 
 
