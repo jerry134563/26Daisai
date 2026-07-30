@@ -17,6 +17,7 @@ uint8_t cnt= 0;
 
 void tracking_line(void)
 {
+	        read_Line_state();
       	uint8_t*read_Line=get_g_Line_state_addr();
         last_turn_speed= tracking_turn_speed;
             if(read_Line[track_left1]  == black) tracking_turn_error += 140,  tracking_led_num++;
@@ -30,11 +31,11 @@ void tracking_line(void)
             if(read_Line[track_right1] == black) tracking_turn_error -= 140,  tracking_led_num++;
 	
 	         if(tracking_led_num>=3)
-					 {           
+					 {
 					   tracking_turn_speed=0;
 						 if(complete_half_flag)
 						 {
-						   if(get_yaw_atk901()<15&&get_yaw_atk901()>-15)
+						   if(get_yaw_atk901()<30&&get_yaw_atk901()>-30)
 							 {
 							     if(tracking_led_num<6)
 									 {
@@ -52,7 +53,7 @@ void tracking_line(void)
 						 tracking_turn_speed = tracking_turn_error / tracking_led_num;   //返回转向速度
 
 	         }
-					 if(get_yaw_atk901()>175||get_yaw_atk901()<-175)
+					 if(get_yaw_atk901()>170||get_yaw_atk901()<-170)
            {
 					   complete_half_flag=1;
 					 }					 

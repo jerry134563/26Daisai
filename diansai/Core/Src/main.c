@@ -132,7 +132,6 @@ int main(void)
     /* USER CODE BEGIN 3 */
 		if(p_time_flag->t_0_5_ms_flag){
 			p_time_flag->t_0_5_ms_flag=0;
-			read_Line_state();
 			
 		}
 	 if(p_time_flag->t_5_ms_flag)
