@@ -84,21 +84,21 @@ void Get_MPU6050_Data(void)
   * 返 回 值：无
   * 说    明：无
   */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-	//MPU6050数据读取引脚	
-	if(GPIO_Pin == MPU6050_EXTI_GPIO_PIN)
-	{
-		Get_MPU6050_Data();
-		__HAL_GPIO_EXTI_CLEAR_IT(MPU6050_EXTI_GPIO_PIN);
-	}
-	
-//	if(GPIO_Pin == MEDICINE_EXTI_GPIO_PIN)//双边沿
+//void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+//{
+//	//MPU6050数据读取引脚	
+//	if(GPIO_Pin == MPU6050_EXTI_GPIO_PIN)
 //	{
-//		rectangle_right_flag = 1;
-//		__HAL_GPIO_EXTI_CLEAR_IT(MEDICINE_EXTI_GPIO_PIN);//释放中断信号
-//	}		
-}
+//		Get_MPU6050_Data();
+//		__HAL_GPIO_EXTI_CLEAR_IT(MPU6050_EXTI_GPIO_PIN);
+//	}
+//	
+////	if(GPIO_Pin == MEDICINE_EXTI_GPIO_PIN)//双边沿
+////	{
+////		rectangle_right_flag = 1;
+////		__HAL_GPIO_EXTI_CLEAR_IT(MEDICINE_EXTI_GPIO_PIN);//释放中断信号
+////	}		
+//}
 float get_yaw(void)
 {
   return Yaw;

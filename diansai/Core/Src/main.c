@@ -71,7 +71,6 @@ void SystemClock_Config(void);
   */
 int main(void)
 {
-
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -102,21 +101,16 @@ int main(void)
   MX_UART8_Init();
   MX_UART7_Init();
   MX_UART5_Init();
+  MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
 	bsp_timer_init();
 	bsp_usart_init();
 	bsp_set_gpio_high(power_en_GPIO_Port,power_en_Pin);
 	bsp_set_gpio_high(PWM_EN_GPIO_Port,PWM_EN_Pin);
-	
-	bsp_set_gpio_low(W1_GPIO_Port,W1_Pin);
-	bsp_set_gpio_low(W2_GPIO_Port,W2_Pin);
-	bsp_set_gpio_low(W3_GPIO_Port,W3_Pin);
-	
-	HAL_NVIC_DisableIRQ(EXTI15_10_IRQn);					
-
-//  MPU6050_Init();
-	
+	HAL_NVIC_EnableIRQ(EXTI4_IRQn);
+	HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
 	HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+
 
   /* USER CODE END 2 */
 
@@ -125,16 +119,14 @@ int main(void)
   cnt_flag_t*p_time_flag=get_g_time_flag_addr();
   PidController_t*pid_forward=pid_get_speed_controller();
   pid_init(pid_forward,85,1.1,0,1500);// pid_init(pid_forward,35,0.95,0.5,4500);5mspid����
- 
-
-
-
+	
+//Emm_V5_Pos_Control(3, 0, 1000, 0, 100, 0, 0);//  * @param    addr,dir(0/1),vel,acc,clk,raF,snF
+//Emm_V5_Pos_Control(3, 1, 1000, 0, 100, 0, 0);
   while (1)
   {
 //		//大头步进电机:地址3, 方向0, 速度1000, 0直接启动, 脉冲�?100, 0, 0(3200为一�?)
 //		Emm_V5_Pos_Control(3, 0, 1000, 0, 100, 0, 0);
-//		HAL_Delay(800);
-		
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -146,26 +138,24 @@ int main(void)
 	 if(p_time_flag->t_5_ms_flag)
 	 {
 			p_time_flag->t_5_ms_flag=0;
-//			tracking_line();
+			tracking_line();
 			int16_t turn_speed = pid_calculate(pid_forward,Wish_angle,get_yaw_atk901(),0,0);
-		  
-//			int16_t motor_L_out=1650-turn_speed;
-//			int16_t motor_R_out=1650+turn_speed;
-//		 
-//			dc_motor_on(motor_L_out,motor_R_out);
-		 
-		 //PidController_t *pid, float target_value, float feedback_value,
-                     // float output_dead_zone, float i_clear_zone
+
 	 }
 	 if(p_time_flag->t_10_ms_flag){
-		KEY_Interupt_10ms_Scan();
+		 
 	 }
 	 if(p_time_flag->t_30_ms_flag){
-		 p_time_flag->t_30_ms_flag = 0;
-		 uint8_t*read_Line=get_g_Line_state_addr();
-		//bsp_usart8_printf("%d,%d,%d,%d,%d,%d,%d,%d\n",read_Line[track_left1],read_Line[track_left2],read_Line[track_left3],read_Line[track_left4],\
-		 read_Line[track_right4],read_Line[track_right3],read_Line[track_right2],read_Line[track_right1]);
-		 bsp_usart8_printf("%f\n",get_yaw_speed());
+	 }
+	 if(p_time_flag->t_500_ms_flag){
+		 p_time_flag->t_500_ms_flag = 0;
+		 
+//		 uint8_t*read_Line=get_g_Line_state_addr();
+		 
+//		bsp_usart8_printf("%d,%d,%d,%d,%d,%d,%d,%d\n",read_Line[track_left1],read_Line[track_left2],read_Line[track_left3],read_Line[track_left4],\
+//		 read_Line[track_right4],read_Line[track_right3],read_Line[track_right2],read_Line[track_right1]);
+		 
+//		 bsp_usart8_printf("%f\n",get_yaw_speed());
 	 }
 
 
@@ -186,13 +176,11 @@ void SystemClock_Config(void)
   /** Supply configuration update enable
   */
   HAL_PWREx_ConfigSupply(PWR_LDO_SUPPLY);
-
   /** Configure the main internal regulator output voltage
   */
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE0);
 
   while(!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
-
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
@@ -212,7 +200,6 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-
   /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
@@ -267,3 +254,5 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -10,7 +10,7 @@ diansai\encoder.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h
 diansai\encoder.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h
 diansai\encoder.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h
 diansai\encoder.o: ../Drivers/CMSIS/Include/core_cm7.h
-diansai\encoder.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+diansai\encoder.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 diansai\encoder.o: ../Drivers/CMSIS/Include/cmsis_version.h
 diansai\encoder.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 diansai\encoder.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -18,8 +18,8 @@ diansai\encoder.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 diansai\encoder.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h
 diansai\encoder.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h
 diansai\encoder.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-diansai\encoder.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-diansai\encoder.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\math.h
+diansai\encoder.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+diansai\encoder.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 diansai\encoder.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
 diansai\encoder.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
 diansai\encoder.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -41,9 +41,11 @@ diansai\encoder.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h
 diansai\encoder.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
 diansai\encoder.o: ./BSP/BSP_H/bsp_timer.h
 diansai\encoder.o: ../Core/Inc/tim.h
+diansai\encoder.o: ./Module/Module_H/key.h
+diansai\encoder.o: ./BSP/BSP_H/BSP_H.h
+diansai\encoder.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 diansai\encoder.o: ./BSP/BSP_H/bsp_usart.h
 diansai\encoder.o: ../Core/Inc/usart.h
-diansai\encoder.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-diansai\encoder.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\string.h
-diansai\encoder.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-diansai\encoder.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+diansai\encoder.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+diansai\encoder.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+diansai\encoder.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

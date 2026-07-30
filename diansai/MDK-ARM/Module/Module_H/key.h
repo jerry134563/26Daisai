@@ -2,6 +2,7 @@
 #define __KEY_H
 
 #include "main.h"
+#include "BSP_H.h"
 
 #include "stdbool.h"
 
@@ -21,7 +22,7 @@ struct keys
 	uint16_t double_time;
 };
 
-extern struct keys key[KEY_NUMBER]; 
+extern volatile struct keys key[KEY_NUMBER]; 
 
 void key_scan(void);	
 void KEY_Interupt_10ms_Scan(void);

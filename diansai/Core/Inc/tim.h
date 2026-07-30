@@ -1,4 +1,3 @@
-/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * @file    tim.h
@@ -7,16 +6,16 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2026 STMicroelectronics.
-  * All rights reserved.
+  * <h2><center>&copy; Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.</center></h2>
   *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
+  * This software component is licensed by ST under BSD 3-Clause license,
+  * the "License"; You may not use this file except in compliance with the
+  * License. You may obtain a copy of the License at:
+  *                        opensource.org/licenses/BSD-3-Clause
   *
   ******************************************************************************
   */
-/* USER CODE END Header */
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __TIM_H__
 #define __TIM_H__
@@ -33,12 +32,10 @@ extern "C" {
 /* USER CODE END Includes */
 
 extern TIM_HandleTypeDef htim1;
-
 extern TIM_HandleTypeDef htim3;
-
 extern TIM_HandleTypeDef htim5;
-
 extern TIM_HandleTypeDef htim6;
+extern TIM_HandleTypeDef htim7;
 
 /* USER CODE BEGIN Private defines */
 
@@ -48,6 +45,7 @@ void MX_TIM1_Init(void);
 void MX_TIM3_Init(void);
 void MX_TIM5_Init(void);
 void MX_TIM6_Init(void);
+void MX_TIM7_Init(void);
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
@@ -61,3 +59,4 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 #endif /* __TIM_H__ */
 
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

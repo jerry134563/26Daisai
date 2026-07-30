@@ -60,14 +60,18 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define power_en_Pin GPIO_PIN_2
 #define power_en_GPIO_Port GPIOE
-#define KEY1_Pin GPIO_PIN_4
-#define KEY1_GPIO_Port GPIOE
-#define KEY2_Pin GPIO_PIN_5
-#define KEY2_GPIO_Port GPIOE
-#define KEY3_Pin GPIO_PIN_6
-#define KEY3_GPIO_Port GPIOE
-#define KEY4_Pin GPIO_PIN_13
-#define KEY4_GPIO_Port GPIOC
+#define Key1_Pin GPIO_PIN_4
+#define Key1_GPIO_Port GPIOE
+#define Key1_EXTI_IRQn EXTI4_IRQn
+#define Key2_Pin GPIO_PIN_5
+#define Key2_GPIO_Port GPIOE
+#define Key2_EXTI_IRQn EXTI9_5_IRQn
+#define Key3_Pin GPIO_PIN_6
+#define Key3_GPIO_Port GPIOE
+#define Key3_EXTI_IRQn EXTI9_5_IRQn
+#define Key4_Pin GPIO_PIN_13
+#define Key4_GPIO_Port GPIOC
+#define Key4_EXTI_IRQn EXTI15_10_IRQn
 #define LE1A_Pin GPIO_PIN_0
 #define LE1A_GPIO_Port GPIOA
 #define LE2B_Pin GPIO_PIN_1
@@ -97,12 +101,12 @@ void Error_Handler(void);
 #define MPU6050_INT_Pin GPIO_PIN_12
 #define MPU6050_INT_GPIO_Port GPIOB
 #define MPU6050_INT_EXTI_IRQn EXTI15_10_IRQn
-#define W1_Pin GPIO_PIN_13
-#define W1_GPIO_Port GPIOB
-#define W2_Pin GPIO_PIN_14
-#define W2_GPIO_Port GPIOB
-#define W3_Pin GPIO_PIN_15
-#define W3_GPIO_Port GPIOB
+#define RED1_Pin GPIO_PIN_13
+#define RED1_GPIO_Port GPIOB
+#define RED2_Pin GPIO_PIN_14
+#define RED2_GPIO_Port GPIOB
+#define RED3_Pin GPIO_PIN_15
+#define RED3_GPIO_Port GPIOB
 #define RED4_Pin GPIO_PIN_8
 #define RED4_GPIO_Port GPIOD
 #define RED5_Pin GPIO_PIN_9
@@ -115,7 +119,6 @@ void Error_Handler(void);
 #define RED8_GPIO_Port GPIOA
 #define LED0_Pin GPIO_PIN_15
 #define LED0_GPIO_Port GPIOA
-
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
@@ -125,3 +128,5 @@ void Error_Handler(void);
 #endif
 
 #endif /* __MAIN_H */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

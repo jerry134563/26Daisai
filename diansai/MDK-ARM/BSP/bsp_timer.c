@@ -1,4 +1,6 @@
 #include "bsp_timer.h"
+
+
 #define Tim_Period_Callback()  void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 cnt_flag_t g_time_flag;
 void bsp_timer_init(void)
@@ -35,19 +37,24 @@ void bsp_timer_set_counter(TIM_HandleTypeDef*tim,uint16_t counter)
 		{
 		g_time_flag.t_1_ms_flag=1;
 		}
-		if(g_time_flag.t_1_ms_count%60==0)
+		if(g_time_flag.t_0_5_ms_count%60==0)
 		{
 		  g_time_flag.t_30_ms_flag=1;
 		}
-		if(g_time_flag.t_1_ms_count%20==0)
+		if(g_time_flag.t_0_5_ms_count%20==0)
 		{
 		  g_time_flag.t_10_ms_flag=1;
 		}
-		else if(g_time_flag.t_1_ms_count%10==0)
+		 if(g_time_flag.t_0_5_ms_count%10==0)
 		{
 		  g_time_flag.t_5_ms_flag=1;
 		}
+		if(g_time_flag.t_0_5_ms_count%1000==0)
+		{
+		  g_time_flag.t_500_ms_flag=1;
+		}
 	}	
+
 }
 
 cnt_flag_t*get_g_time_flag_addr(void)

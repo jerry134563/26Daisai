@@ -56,15 +56,18 @@ void SVC_Handler(void);
 void DebugMon_Handler(void);
 void PendSV_Handler(void);
 void SysTick_Handler(void);
+void EXTI4_IRQHandler(void);
 void DMA1_Stream0_IRQHandler(void);
 void DMA1_Stream1_IRQHandler(void);
 void DMA1_Stream2_IRQHandler(void);
 void DMA1_Stream3_IRQHandler(void);
 void DMA1_Stream4_IRQHandler(void);
 void DMA1_Stream5_IRQHandler(void);
+void EXTI9_5_IRQHandler(void);
 void EXTI15_10_IRQHandler(void);
 void UART5_IRQHandler(void);
 void TIM6_DAC_IRQHandler(void);
+void TIM7_IRQHandler(void);
 void UART7_IRQHandler(void);
 void UART8_IRQHandler(void);
 /* USER CODE BEGIN EFP */
@@ -76,3 +79,5 @@ void UART8_IRQHandler(void);
 #endif
 
 #endif /* __STM32H7xx_IT_H */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

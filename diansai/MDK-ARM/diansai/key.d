@@ -8,7 +8,7 @@ diansai\key.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h
 diansai\key.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h
 diansai\key.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h
 diansai\key.o: ../Drivers/CMSIS/Include/core_cm7.h
-diansai\key.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+diansai\key.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 diansai\key.o: ../Drivers/CMSIS/Include/cmsis_version.h
 diansai\key.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 diansai\key.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -16,8 +16,8 @@ diansai\key.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 diansai\key.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h
 diansai\key.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h
 diansai\key.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-diansai\key.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-diansai\key.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\math.h
+diansai\key.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+diansai\key.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 diansai\key.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
 diansai\key.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
 diansai\key.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h
@@ -37,6 +37,15 @@ diansai\key.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h
 diansai\key.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h
 diansai\key.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h
 diansai\key.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
-diansai\key.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-diansai\key.o: ./Module/Module_H/Emm_V5.h
+diansai\key.o: ./BSP/BSP_H/BSP_H.h
+diansai\key.o: ./BSP/BSP_H/bsp_gpio.h
+diansai\key.o: ./BSP/BSP_H/bsp_timer.h
+diansai\key.o: ../Core/Inc/tim.h
+diansai\key.o: ./Module/Module_H/key.h
+diansai\key.o: ./BSP/BSP_H/bsp_usart.h
 diansai\key.o: ../Core/Inc/usart.h
+diansai\key.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+diansai\key.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+diansai\key.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+diansai\key.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+diansai\key.o: ./Module/Module_H/Emm_V5.h
