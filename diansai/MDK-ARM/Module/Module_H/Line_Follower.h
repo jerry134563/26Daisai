@@ -25,6 +25,7 @@ enum tracking2
 
 #endif 
 
-uint8_t*read_Line_state(void);
+void read_Line_state(void);
+uint8_t*get_g_Line_state_addr(void);
 
 #endif

@@ -18,7 +18,7 @@ float k_turn = 0.01;
 void tracking_line(void)
 {
 	
-      	uint8_t*read_Line=read_Line_state();
+      	uint8_t*read_Line=get_g_Line_state_addr();
                     last_turn_speed= tracking_turn_speed;
             if(read_Line[track_left1]  == black) tracking_turn_error += 140,  tracking_led_num++;
             if(read_Line[track_left2]  == black) tracking_turn_error += 120,  tracking_led_num++;

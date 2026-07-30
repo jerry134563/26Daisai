@@ -1,9 +1,9 @@
 diansai\inv_mpu_dmp_motion_driver.o: ATK_MS6050\eMPL\inv_mpu_dmp_motion_driver.c
-diansai\inv_mpu_dmp_motion_driver.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-diansai\inv_mpu_dmp_motion_driver.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-diansai\inv_mpu_dmp_motion_driver.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-diansai\inv_mpu_dmp_motion_driver.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-diansai\inv_mpu_dmp_motion_driver.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+diansai\inv_mpu_dmp_motion_driver.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+diansai\inv_mpu_dmp_motion_driver.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+diansai\inv_mpu_dmp_motion_driver.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+diansai\inv_mpu_dmp_motion_driver.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\string.h
+diansai\inv_mpu_dmp_motion_driver.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\math.h
 diansai\inv_mpu_dmp_motion_driver.o: ../Core/Inc/main.h
 diansai\inv_mpu_dmp_motion_driver.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h
 diansai\inv_mpu_dmp_motion_driver.o: ../Core/Inc/stm32h7xx_hal_conf.h
@@ -19,7 +19,7 @@ diansai\inv_mpu_dmp_motion_driver.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 diansai\inv_mpu_dmp_motion_driver.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h
 diansai\inv_mpu_dmp_motion_driver.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h
 diansai\inv_mpu_dmp_motion_driver.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-diansai\inv_mpu_dmp_motion_driver.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+diansai\inv_mpu_dmp_motion_driver.o: F:\keilv543\keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 diansai\inv_mpu_dmp_motion_driver.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h
 diansai\inv_mpu_dmp_motion_driver.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h
 diansai\inv_mpu_dmp_motion_driver.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h

@@ -29,17 +29,21 @@ void bsp_timer_set_counter(TIM_HandleTypeDef*tim,uint16_t counter)
 {	
 	if(htim==&htim6)
 	{
-		g_time_flag.t_1_ms_count++;
+		g_time_flag.t_0_5_ms_count++;
+		g_time_flag.t_0_5_ms_flag=1;
+		if(g_time_flag.t_0_5_ms_count%2)
+		{
 		g_time_flag.t_1_ms_flag=1;
-		if(g_time_flag.t_1_ms_count%30==0)
+		}
+		if(g_time_flag.t_1_ms_count%60==0)
 		{
 		  g_time_flag.t_30_ms_flag=1;
 		}
-		if(g_time_flag.t_1_ms_count%10==0)
+		if(g_time_flag.t_1_ms_count%20==0)
 		{
 		  g_time_flag.t_10_ms_flag=1;
 		}
-		else if(g_time_flag.t_1_ms_count%5==0)
+		else if(g_time_flag.t_1_ms_count%10==0)
 		{
 		  g_time_flag.t_5_ms_flag=1;
 		}

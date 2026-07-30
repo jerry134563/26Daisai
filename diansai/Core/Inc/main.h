@@ -97,12 +97,12 @@ void Error_Handler(void);
 #define MPU6050_INT_Pin GPIO_PIN_12
 #define MPU6050_INT_GPIO_Port GPIOB
 #define MPU6050_INT_EXTI_IRQn EXTI15_10_IRQn
-#define RED1_Pin GPIO_PIN_13
-#define RED1_GPIO_Port GPIOB
-#define RED2_Pin GPIO_PIN_14
-#define RED2_GPIO_Port GPIOB
-#define RED3_Pin GPIO_PIN_15
-#define RED3_GPIO_Port GPIOB
+#define W1_Pin GPIO_PIN_13
+#define W1_GPIO_Port GPIOB
+#define W2_Pin GPIO_PIN_14
+#define W2_GPIO_Port GPIOB
+#define W3_Pin GPIO_PIN_15
+#define W3_GPIO_Port GPIOB
 #define RED4_Pin GPIO_PIN_8
 #define RED4_GPIO_Port GPIOD
 #define RED5_Pin GPIO_PIN_9
@@ -115,6 +115,7 @@ void Error_Handler(void);
 #define RED8_GPIO_Port GPIOA
 #define LED0_Pin GPIO_PIN_15
 #define LED0_GPIO_Port GPIOA
+
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
@@ -124,5 +125,3 @@ void Error_Handler(void);
 #endif
 
 #endif /* __MAIN_H */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
