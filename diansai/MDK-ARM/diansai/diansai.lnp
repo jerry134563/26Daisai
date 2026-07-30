@@ -15,6 +15,7 @@
 "diansai\dc_motor.o"
 "diansai\mpu6050.o"
 "diansai\emm_v5.o"
+"diansai\key.o"
 "diansai\line_tracking.o"
 "diansai\pid.o"
 "diansai\atk_ms6050.o"

@@ -126,7 +126,7 @@ int main(void)
 
   while (1)
   {
-//		//大头步进电机:地址3, 方向0, 速度1000, 0直接启动, 脉冲数100, 0, 0(3200为一圈)
+//		//大头步进电机:地址3, 方向0, 速度1000, 0直接启动, 脉冲�?100, 0, 0(3200为一�?)
 //		Emm_V5_Pos_Control(3, 0, 1000, 0, 100, 0, 0);
 //		HAL_Delay(800);
 		
@@ -146,6 +146,9 @@ int main(void)
 		 
 		 //PidController_t *pid, float target_value, float feedback_value,
                      // float output_dead_zone, float i_clear_zone
+	 }
+	 if(p_time_flag->t_10_ms_flag){
+		KEY_Interupt_10ms_Scan();
 	 }
 	 if(p_time_flag->t_30_ms_flag){
 		 p_time_flag->t_30_ms_flag = 0;

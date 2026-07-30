@@ -60,6 +60,14 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define power_en_Pin GPIO_PIN_2
 #define power_en_GPIO_Port GPIOE
+#define KEY1_Pin GPIO_PIN_4
+#define KEY1_GPIO_Port GPIOE
+#define KEY2_Pin GPIO_PIN_5
+#define KEY2_GPIO_Port GPIOE
+#define KEY3_Pin GPIO_PIN_6
+#define KEY3_GPIO_Port GPIOE
+#define KEY4_Pin GPIO_PIN_13
+#define KEY4_GPIO_Port GPIOC
 #define LE1A_Pin GPIO_PIN_0
 #define LE1A_GPIO_Port GPIOA
 #define LE2B_Pin GPIO_PIN_1

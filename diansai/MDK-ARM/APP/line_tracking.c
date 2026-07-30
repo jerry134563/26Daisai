@@ -12,7 +12,7 @@ int16_t tracking_speed = 1650;		        //循迹期望速度1650
 int16_t last_turn_speed = 0;		        //循迹期望速度1650
 
 float kp_l=16;
-float kd_l= -90 ;//-1
+float kd_l= 0 ;//-1
 float k_turn = 0.01;
 
 void tracking_line(void)

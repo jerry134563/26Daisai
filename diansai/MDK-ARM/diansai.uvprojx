@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32H750xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc; ../Drivers/STM32H7xx_HAL_Driver/Inc; ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy; ../Drivers/CMSIS/Device/ST/STM32H7xx/Include; ../Drivers/CMSIS/Include; ./BSP/BSP_H; ./Module/Module_H; ./Alg/ALG_H; ./APP/APP_H; ./ATK_MS6050; ./ATK_MS6050/eMPL</IncludePath>
+              <IncludePath>../Core/Inc;  ../Drivers/STM32H7xx_HAL_Driver/Inc;  ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;  ../Drivers/CMSIS/Device/ST/STM32H7xx/Include;  ../Drivers/CMSIS/Include;  ./BSP/BSP_H;  ./Module/Module_H;  ./Alg/ALG_H;  ./APP/APP_H;  ./ATK_MS6050;  ./ATK_MS6050/eMPL</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -692,6 +692,11 @@
               <FileName>Emm_V5.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Module\Emm_V5.c</FilePath>
+            </File>
+            <File>
+              <FileName>key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Module\key.c</FilePath>
             </File>
           </Files>
         </Group>

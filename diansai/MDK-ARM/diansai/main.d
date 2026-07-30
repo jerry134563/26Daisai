@@ -56,6 +56,7 @@ diansai\main.o: ./Module/Module_H/mpu6050.h
 diansai\main.o: ./ATK_MS6050/atk_ms6050.h
 diansai\main.o: ./ATK_MS6050/eMPL/inv_mpu.h
 diansai\main.o: ./Module/Module_H/Emm_V5.h
+diansai\main.o: ./Module/Module_H/key.h
 diansai\main.o: ./Alg/ALG_H/pid.h
 diansai\main.o: ./APP/APP_H/line_tracking.h
 diansai\main.o: ./Alg/ALG_H/ALG_H.h
