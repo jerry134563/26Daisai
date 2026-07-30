@@ -102,6 +102,7 @@ int main(void)
   MX_UART7_Init();
   MX_UART5_Init();
   MX_TIM7_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 	bsp_timer_init();
 	bsp_usart_init();
@@ -122,6 +123,7 @@ int main(void)
 	
 //Emm_V5_Pos_Control(3, 0, 1000, 0, 100, 0, 0);//  * @param    addr,dir(0/1),vel,acc,clk,raF,snF
 //Emm_V5_Pos_Control(3, 1, 1000, 0, 100, 0, 0);
+    HAL_Delay(1000);
   while (1)
   {
 //		//大头步进电机:地址3, 方向0, 速度1000, 0直接启动, 脉冲�?100, 0, 0(3200为一�?)
