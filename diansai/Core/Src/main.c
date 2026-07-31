@@ -139,7 +139,7 @@ int main(void)
 	
 	Step_abs_pos(4);
 	
-	HAL_Delay(1660);
+	HAL_Delay(1460);//1660
 //	Step_abs_pos(-110);
 //	HAL_Delay(2200);
 	
@@ -160,15 +160,18 @@ int main(void)
 	 {
 			p_time_flag->t_5_ms_flag=0;
 			tracking_line();
-			int16_t turn_speed = pid_calculate(pid_forward,Wish_angle,get_yaw_atk901(),0,0);
+		 open_control();
 
 	 }
 	 if(p_time_flag->t_16_ms_flag){
 		 p_time_flag->t_16_ms_flag=0;
-		 ball_position();
-		 
+		// ball_position();
+		 	open_control();
+
 	 }
 	 if(p_time_flag->t_30_ms_flag){
+		 p_time_flag->t_30_ms_flag=0;
+
 	 }
 	 if(p_time_flag->t_500_ms_flag){
 		 p_time_flag->t_500_ms_flag = 0;

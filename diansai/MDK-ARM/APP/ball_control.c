@@ -55,7 +55,19 @@ void ball_position(void){
 //	Step_abs_pos(total_move);
 //}
 
+void open_control(void)
+{
+   static uint32_t count=0;
+	 count++;
+   if(get_ball_x()<=g__5cm_x)
+	 {
+	   	Emm_V5_Pos_Control(3, 1, 800, 0, 20, 1, 0);
+	 }	
+   else if(get_ball_x()>g__5cm_x){
+	 	Emm_V5_Pos_Control(3, 0, 800, 0, 20, 1, 0);
+	 }	 
 
+}
 
 
 

@@ -6,6 +6,7 @@
 #include "pid.h"
 void ball_control_init(void);
 void ball_position(void);
+void open_control(void);
 
 
 
