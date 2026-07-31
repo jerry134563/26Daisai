@@ -31,6 +31,7 @@
 #include "pid.h"
 #include "line_tracking.h"
 #include "ball_control.h"
+#include "Oled_show.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -122,8 +123,12 @@ int main(void)
   pid_init(pid_forward,85,1.1,0,1500);// pid_init(pid_forward,35,0.95,0.5,4500);5mspid����
 	ball_control_init();
 	uint8_t*u8_array=get_s_rx_buf_u8();
+	OLED_Init();
+	HAL_Delay(800);
+	back_to_zero();
 	
-
+	OLED_ShowSignedNum(30,60,1,1,50);
+  OLED_Update();
 	
   while (1)
   {
@@ -142,7 +147,7 @@ int main(void)
 				static uint8_t count=0;
 				if(count==0)
 				{
-				  HAL_Delay(1000);//等待手抬起
+				  HAL_Delay(1000);//等待手抬�?
 					count=1;
 				}
 				tracking_line();			

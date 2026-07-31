@@ -62,3 +62,7 @@ diansai\main.o: ./Alg/ALG_H/pid.h
 diansai\main.o: ./APP/APP_H/line_tracking.h
 diansai\main.o: ./Alg/ALG_H/ALG_H.h
 diansai\main.o: ./APP/APP_H/ball_control.h
+diansai\main.o: ./APP/APP_H/Oled_show.h
+diansai\main.o: ./Module/Module_H/OLED_Data.h
+diansai\main.o: ./Module/Module_H/OLED.h
+diansai\main.o: ./ATK_MS6050/delay.h
