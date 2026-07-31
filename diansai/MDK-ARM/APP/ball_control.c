@@ -86,7 +86,26 @@ void open_control(void)
 
 }
 
+void ball_first_step(void)
+{
+  HAL_Delay(1000);//µÈ´ýÌ§Æð
+	back_to_zero();
+	HAL_Delay(5000);
+	
+	Step_abs_pos(122);
+	HAL_Delay(400);
+	
+	Step_abs_pos(-80);
+	HAL_Delay(400);
+	Step_abs_pos(-72);
+	HAL_Delay(300);
+	Step_abs_pos(-50);
+	HAL_Delay(260);
+	
+	Step_abs_pos(4);
+	HAL_Delay(1460);
 
+}
 
 
 

@@ -15,7 +15,7 @@ float kd_l= 0 ;//-1
 float k_turn = 0.01;
 uint8_t cnt= 0;
 
-void tracking_line(void)
+uint8_t tracking_line(void)
 {
 	        read_Line_state();
       	uint8_t*read_Line=get_g_Line_state_addr();
@@ -42,7 +42,8 @@ void tracking_line(void)
 										 dc_motorL_brake();
 										 dc_motorR_brake();
 										 dc_motor_on(0,0);
-                     HAL_Delay(15000);										 
+										 *get_KEY1_Push_flag()=0;
+										 return 1;
 									 }
 							 }
 						 

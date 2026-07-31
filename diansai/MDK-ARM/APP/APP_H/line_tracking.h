@@ -4,6 +4,6 @@
 #include "main.h"
 #include "Module_H.h"
 #include "ALG_H.h"
-void tracking_line(void);
+uint8_t tracking_line(void);
 
 #endif

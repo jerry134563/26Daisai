@@ -123,22 +123,7 @@ int main(void)
 	ball_control_init();
 	uint8_t*u8_array=get_s_rx_buf_u8();
 	
-	HAL_Delay(1000);
-	back_to_zero();
-	HAL_Delay(5000);
-	
-	Step_abs_pos(122);
-	HAL_Delay(400);
-	
-	Step_abs_pos(-80);
-	HAL_Delay(400);
-	Step_abs_pos(-72);
-	HAL_Delay(300);
-	Step_abs_pos(-50);
-	HAL_Delay(260);
-	
-	Step_abs_pos(4);
-	HAL_Delay(1460);
+
 	
   while (1)
   {
@@ -152,20 +137,33 @@ int main(void)
 	 if(p_time_flag->t_5_ms_flag)
 	 {
 			p_time_flag->t_5_ms_flag=0;
-			tracking_line();
-		 open_control();
-
+		  if(*get_KEY1_Push_flag())
+			{
+				static uint8_t count=0;
+				if(count==0)
+				{
+				  HAL_Delay(1000);//等待手抬起
+					count=1;
+				}
+				tracking_line();			
+			}
 	 }
 	 if(p_time_flag->t_16_ms_flag){
 		 p_time_flag->t_16_ms_flag=0;
-		// ball_position();
 
 	 }
 	 if(p_time_flag->t_30_ms_flag){
 		 p_time_flag->t_30_ms_flag=0;
-		 		 	open_control();
-
-
+	      if(*get_KEY2_Push_flag())	 
+		 		{
+					static uint8_t count=0;
+					if(count==0)
+					{
+						ball_first_step();
+						count=1;
+					}
+					open_control();//结束逻辑还没有写get_KEY2_Push_flag也要=0;
+				}
 	 }
 	 if(p_time_flag->t_500_ms_flag){
 		 p_time_flag->t_500_ms_flag = 0;
