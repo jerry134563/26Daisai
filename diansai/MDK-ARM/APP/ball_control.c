@@ -1,21 +1,43 @@
 #include "ball_control.h"
 PidController_t ball_control;
 uint16_t zore_x=110;
-uint16_t g__5cm_x=152;
-uint16_t g_5cm_x=66;
+uint16_t g__5cm_x=65;
+uint16_t g_5cm_x=152;
 int16_t total_move=0,out = 0;
+float kp_b=1.8;
+float ki_b=0;
+float kd_b=0;
+int16_t err=0,last_err = 0,err_sum = 0;
+uint8_t stable_cnt = 0;
+
 void ball_control_init(void){
-	pid_init(&ball_control,1.6,0,30,150);
+	pid_init(&ball_control,1.3,0,0,150);//1.3,0,0,150
 }
 
+#define max_err_sum 32
 void ball_position(void){
-   out=pid_calculate(&ball_control,g__5cm_x,get_ball_x(),0,0);
-	total_move = out;
-	Step_abs_pos(total_move);
-	
+  err=g__5cm_x-get_ball_x();
+	err_sum+= err;
+	if(err>max_err_sum){err = max_err_sum;}if(err<-max_err_sum){err = -max_err_sum;}
+	out=kp_b*err+ki_b*err_sum+kd_b*(err-last_err);
+	if(out>11)
+	{
+	  out=11;
+	}
+	 if(out<-11)
+	{
+	  out=-11;
+	}
+	bsp_usart8_printf("%d\n",out);
+	Step_abs_pos(out);
+	last_err = err;
 }
 
-
+//void ball_stay_in_5(){
+//	out=pid_calculate(&ball_control,g__5cm_x,get_ball_x(),0,0);
+//	total_move = out;
+//	Step_abs_pos(total_move);
+//}
 
 
 

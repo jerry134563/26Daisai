@@ -1742,7 +1742,7 @@ void Step_up(uint16_t clk){
 	if(clk>150)clk = 150;
 	Emm_V5_Pos_Control(3, 1, rpm, 0, clk, 1, 0);
 }
-
+//  * @param    addr,dir,vel,acc,clk,raF(1为绝对值运动),snF
 void Step_down(uint16_t clk){
 	if(clk>150)clk = 150;
 	Emm_V5_Pos_Control(3, 0, rpm, 0, clk, 1, 0);
@@ -1758,4 +1758,6 @@ void Step_abs_pos(int16_t clk){
 		Emm_V5_Pos_Control(3, 1, rpm, 0, 0, 1, 0);
 	}
 }
-
+void back_to_zero(void){
+	Emm_V5_Origin_Trigger_Return(3, 0, 0);
+}

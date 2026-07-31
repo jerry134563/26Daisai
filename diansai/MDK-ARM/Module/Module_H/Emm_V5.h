@@ -234,5 +234,6 @@ void Emm_V5_MMCL_Read_Sys_Params(uint8_t addr, SysParams_t s);
 void Step_up(uint16_t clk);
 void Step_down(uint16_t clk);
 void Step_abs_pos(int16_t clk);
+void back_to_zero(void);
 
 #endif

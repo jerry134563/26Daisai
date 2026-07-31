@@ -122,11 +122,33 @@ int main(void)
   pid_init(pid_forward,85,1.1,0,1500);// pid_init(pid_forward,35,0.95,0.5,4500);5mspid����
 	ball_control_init();
 	uint8_t*u8_array=get_s_rx_buf_u8();
+	
+	HAL_Delay(1000);
+	back_to_zero();
+	HAL_Delay(5000);
+	
+	Step_abs_pos(130);
+	HAL_Delay(410);
+	
+	Step_abs_pos(-80);
+	HAL_Delay(400);
+	Step_abs_pos(-62);
+	HAL_Delay(300);
+	Step_abs_pos(-50);
+	HAL_Delay(250);
+	
+	Step_abs_pos(4);
+	
+	HAL_Delay(1200);
+//	Step_abs_pos(-110);
+//	HAL_Delay(2200);
+	
+	
+	
+	
+//	HAL_Delay(10000);
   while (1)
   {
-//		//大头步进电机:地址3, 方向0, 速度1000, 0直接启动, 脉冲�?100, 0, 0(3200为一�?)
-//		Emm_V5_Pos_Control(3, 0, 1000, 0, 100, 0, 0);
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -158,23 +180,8 @@ int main(void)
 		 
 //		 bsp_usart8_printf("%f\n",get_yaw_speed());
 	 }
-	 test_key();
-   if(u8_array[0]=='1')
-	 {
-	   		Emm_V5_Pos_Control(3, 0, 1000, 0, 10, 0, 0);//@param:addr,dir(0/1),vel,acc,clk,raF,snF
-		 u8_array[0]=0;
-	 }
-	    if(u8_array[0]=='2')
-	 {
-		Emm_V5_Pos_Control(3, 1, 1000, 0, 10, 0, 0);
-		 		 u8_array[0]=0;
+	
 
-	 }
-	    if(u8_array[0]=='4')
-	 {
-		Emm_V5_Pos_Control(3, 0, 1000, 0, 10, 0, 0);
-		 		 u8_array[0]=0;
-	 }
 
   }
   /* USER CODE END 3 */

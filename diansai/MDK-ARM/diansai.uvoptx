@@ -220,6 +220,11 @@
           <WinNumber>1</WinNumber>
           <ItemText>total_move,0x0A</ItemText>
         </Ww>
+        <Ww>
+          <count>12</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>s_rx_buf_u2</ItemText>
+        </Ww>
       </WatchWindow1>
       <WatchWindow2>
         <Ww>
@@ -256,6 +261,16 @@
           <count>6</count>
           <WinNumber>2</WinNumber>
           <ItemText>total_move,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>7</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>err,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>8</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>out,0x0A</ItemText>
         </Ww>
       </WatchWindow2>
       <Tracepoint>
