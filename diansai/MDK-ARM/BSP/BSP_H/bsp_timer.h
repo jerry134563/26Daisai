@@ -15,6 +15,8 @@ typedef struct
 	volatile uint8_t t_30_ms_flag;
   volatile uint8_t t_5_ms_flag;
 	volatile uint8_t t_500_ms_flag;
+	volatile uint8_t t_16_ms_flag;
+
 
 
 }cnt_flag_t;

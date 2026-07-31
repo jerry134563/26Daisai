@@ -61,3 +61,4 @@ diansai\main.o: ./Module/Module_H/Emm_V5.h
 diansai\main.o: ./Alg/ALG_H/pid.h
 diansai\main.o: ./APP/APP_H/line_tracking.h
 diansai\main.o: ./Alg/ALG_H/ALG_H.h
+diansai\main.o: ./APP/APP_H/ball_control.h

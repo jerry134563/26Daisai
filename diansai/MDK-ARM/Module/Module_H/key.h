@@ -26,6 +26,10 @@ extern volatile struct keys key[KEY_NUMBER];
 
 void key_scan(void);	
 void KEY_Interupt_10ms_Scan(void);
+uint8_t* get_KEY1_Push_flag(void);
+uint8_t* get_KEY2_Push_flag(void);
+uint8_t* get_KEY4_Push_flag(void);
+void test_key(void);
 
 #endif
 

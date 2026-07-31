@@ -7,7 +7,7 @@ int16_t tracking_turn_error = 0;
 int16_t tracking_turn_speed = 0;		  
 int16_t tracking_led_num = 0;              
 int8_t crossing_num = 0;                  
-int16_t tracking_speed = 2450;		        //循迹期望速度1650; only xunji:2550; xunji & ball:?
+int16_t tracking_speed = 2000;		        //循迹期望速度1650; only xunji:2550; xunji & ball:?
 int16_t last_turn_speed = 0;		        
 uint8_t complete_half_flag=0;
 float kp_l=11;
@@ -35,7 +35,7 @@ void tracking_line(void)
 					   tracking_turn_speed=0;
 						 if(complete_half_flag)
 						 {
-						   if(get_yaw_atk901()<30&&get_yaw_atk901()>-30)
+						   if(get_yaw_atk901()<15&&get_yaw_atk901()>-15)
 							 {
 							     if(tracking_led_num<6)
 									 {

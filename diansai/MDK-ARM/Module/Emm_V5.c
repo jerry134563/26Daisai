@@ -1734,3 +1734,28 @@ void Emm_V5_MMCL_Read_Sys_Params(uint8_t addr, SysParams_t s)
 /**********************************************************
 *** ¶ÁÐ´Çý¶¯²ÎÊýÃüÁî
 **********************************************************/
+
+
+/* ·â×°¼òÒ×ÃüÁî */
+#define rpm 25
+void Step_up(uint16_t clk){
+	if(clk>150)clk = 150;
+	Emm_V5_Pos_Control(3, 1, rpm, 0, clk, 1, 0);
+}
+
+void Step_down(uint16_t clk){
+	if(clk>150)clk = 150;
+	Emm_V5_Pos_Control(3, 0, rpm, 0, clk, 1, 0);
+}
+void Step_abs_pos(int16_t clk){
+	if(clk>0){
+		Step_up(clk);
+	} 
+	if(clk<0){
+		Step_down(-clk);
+	}
+	if(clk==0){
+		Emm_V5_Pos_Control(3, 1, rpm, 0, 0, 1, 0);
+	}
+}
+

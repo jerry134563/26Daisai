@@ -53,6 +53,10 @@ void bsp_timer_set_counter(TIM_HandleTypeDef*tim,uint16_t counter)
 		{
 		  g_time_flag.t_500_ms_flag=1;
 		}
+		if(g_time_flag.t_16_ms_flag%32==0)
+		{
+		  g_time_flag.t_16_ms_flag=1;
+		}
 	}	
 
 }

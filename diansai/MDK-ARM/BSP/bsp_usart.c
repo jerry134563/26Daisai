@@ -135,8 +135,14 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 	__HAL_UART_CLEAR_NEFLAG(huart);
 }
 
-
-
+uint8_t*get_s_rx_buf_u8(void)
+{
+  return s_rx_buf_u8;
+}
+uint8_t get_ball_x(void)
+{
+  return ball_x;
+}
 
 
 
