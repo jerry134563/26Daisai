@@ -4,7 +4,7 @@ uint16_t zore_x=110;
 uint16_t g__5cm_x=65;
 uint16_t g_5cm_x=152;
 int16_t total_move=0,out = 0;
-float kp_b=1.8;
+float kp_b=2;
 float ki_b=0;
 float kd_b=0;
 int16_t err=0,last_err = 0,err_sum = 0;
@@ -20,16 +20,32 @@ void ball_position(void){
 	err_sum+= err;
 	if(err>max_err_sum){err = max_err_sum;}if(err<-max_err_sum){err = -max_err_sum;}
 	out=kp_b*err+ki_b*err_sum+kd_b*(err-last_err);
-	if(out>11)
+	if(out>30)
 	{
-	  out=11;
+	  out=30;
 	}
-	 if(out<-11)
+	 if(out<-30)
 	{
-	  out=-11;
+	  out=-30;
 	}
 	bsp_usart8_printf("%d\n",out);
-	Step_abs_pos(out);
+		if(out>0){
+			if(out>150)
+			{
+				out = 150;
+			}
+	Emm_V5_Pos_Control(3, 1, 1500, 0, out, 1, 0);
+	} 
+	  if(out<0){
+       	if(out<-150)
+				{
+					out = -150;
+				}
+	Emm_V5_Pos_Control(3, 0, 1500, 0, -out, 1, 0);
+	}
+	if(out==0){
+		Emm_V5_Pos_Control(3, 1, 0, 0, 0, 1, 0);
+	}
 	last_err = err;
 }
 

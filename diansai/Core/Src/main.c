@@ -139,7 +139,7 @@ int main(void)
 	
 	Step_abs_pos(4);
 	
-	HAL_Delay(1200);
+	HAL_Delay(1660);
 //	Step_abs_pos(-110);
 //	HAL_Delay(2200);
 	
