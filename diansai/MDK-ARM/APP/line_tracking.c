@@ -7,14 +7,14 @@ int16_t tracking_turn_error = 0;
 int16_t tracking_turn_speed = 0;		  
 int16_t tracking_led_num = 0;              
 int8_t crossing_num = 0;                  
-int16_t tracking_speed = 2000;		        //循迹期望速度1650; only xunji:2550; xunji & ball:?
+int16_t tracking_speed = 2200;		        //循迹期望速度1650; only xunji:2550; xunji & ball:?
 int16_t last_turn_speed = 0;		        
 uint8_t complete_half_flag=0;
 float kp_l=11;
 float kd_l= 0 ;//-1
 float k_turn = 0.01;
 uint8_t cnt= 0;
-
+uint8_t complete_line_track_flag=0;
 uint8_t tracking_line(void)
 {
 	        read_Line_state();
@@ -35,7 +35,7 @@ uint8_t tracking_line(void)
 					   tracking_turn_speed=0;
 						 if(complete_half_flag)
 						 {
-						   if(get_yaw_atk901()<15&&get_yaw_atk901()>-15)
+						   if(get_yaw_atk901()<20&&get_yaw_atk901()>-20)
 							 {
 							     if(tracking_led_num<6)
 									 {
@@ -43,6 +43,7 @@ uint8_t tracking_line(void)
 										 dc_motorR_brake();
 										 dc_motor_on(0,0);
 										 *get_KEY1_Push_flag()=0;
+										 complete_line_track_flag=1;
 										 return 1;
 									 }
 							 }
@@ -64,8 +65,13 @@ uint8_t tracking_line(void)
 					int16_t motor_L_out=tracking_speed-tracking_turn_speed*kp_l+kd_l*get_yaw_speed();
 					int16_t motor_R_out=tracking_speed+tracking_turn_speed*kp_l+kd_l*get_yaw_speed();
 					dc_motor_on(motor_L_out,motor_R_out);
-			}	
+			return 0;
+}
 
-				
+uint8_t get_complete_line_track_flag(void)
+{
+
+return complete_line_track_flag;
+}	
 
 			

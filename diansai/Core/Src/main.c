@@ -123,12 +123,13 @@ int main(void)
   pid_init(pid_forward,85,1.1,0,1500);// pid_init(pid_forward,35,0.95,0.5,4500);5mspid����
 	ball_control_init();
 	uint8_t*u8_array=get_s_rx_buf_u8();
-	OLED_Init();
+	OLED_Init();											
+	OLED_Clear();	
+	oled_show();
+	
 	HAL_Delay(800);
 	back_to_zero();
-	
-	OLED_ShowSignedNum(30,60,1,1,50);
-  OLED_Update();
+
 	
   while (1)
   {
@@ -144,6 +145,8 @@ int main(void)
 			p_time_flag->t_5_ms_flag=0;
 		  if(*get_KEY1_Push_flag())
 			{
+				*tick_mode_addr() = 1;
+				* task_num_addr() = 2;
 				static uint8_t count=0;
 				if(count==0)
 				{
@@ -161,6 +164,8 @@ int main(void)
 		 p_time_flag->t_30_ms_flag=0;
 	      if(*get_KEY2_Push_flag())	 
 		 		{
+					*tick_mode_addr() = 1;
+					* task_num_addr() = 3;
 					static uint8_t count=0;
 					if(count==0)
 					{
@@ -172,7 +177,7 @@ int main(void)
 	 }
 	 if(p_time_flag->t_500_ms_flag){
 		 p_time_flag->t_500_ms_flag = 0;
-		 
+		 oled_show();
 //		 uint8_t*read_Line=get_g_Line_state_addr();
 		 
 //		bsp_usart8_printf("%d,%d,%d,%d,%d,%d,%d,%d\n",read_Line[track_left1],read_Line[track_left2],read_Line[track_left3],read_Line[track_left4],\
