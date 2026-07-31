@@ -9,6 +9,8 @@ float ki_b=0;
 float kd_b=0;
 int16_t err=0,last_err = 0,err_sum = 0;
 uint8_t stable_cnt = 0;
+uint32_t count=0;
+uint32_t count2=0;
 
 void ball_control_init(void){
 	pid_init(&ball_control,1.3,0,0,150);//1.3,0,0,150
@@ -57,14 +59,29 @@ void ball_position(void){
 
 void open_control(void)
 {
-   static uint32_t count=0;
-	 count++;
+	 HAL_StatusTypeDef ret;
    if(get_ball_x()<=g__5cm_x)
 	 {
-	   	Emm_V5_Pos_Control(3, 1, 800, 0, 20, 1, 0);
+	   	 HAL_StatusTypeDef ret=Emm_V5_Pos_Control(3, 1, 800, 0, 20, 1, 0);
+		   if(ret!=HAL_OK)
+			 {
+			   count++;
+			 }
+			 			 else
+			 {
+			 count2++;
+			 }
 	 }	
    else if(get_ball_x()>g__5cm_x){
-	 	Emm_V5_Pos_Control(3, 0, 800, 0, 20, 1, 0);
+	 HAL_StatusTypeDef ret=	Emm_V5_Pos_Control(3, 0, 800, 0, 20, 1, 0);
+		 		   if(ret!=HAL_OK)
+			 {
+			   count++;
+			 }
+			 else
+			 {
+			 count2++;
+			 }
 	 }	 
 
 }

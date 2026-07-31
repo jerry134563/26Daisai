@@ -208,7 +208,7 @@ void Emm_V5_Vel_Control(uint8_t addr, uint8_t dir, uint16_t vel, uint8_t acc, bo
   * @param    snF ：多机同步标志 ，false为不启用，true为启用
   * @retval   地址 + 功能码 + 命令状态 + 校验字节
   */
-void Emm_V5_Pos_Control(uint8_t addr, uint8_t dir, uint16_t vel, uint8_t acc, uint32_t clk, uint8_t raF, bool snF)
+HAL_StatusTypeDef Emm_V5_Pos_Control(uint8_t addr, uint8_t dir, uint16_t vel, uint8_t acc, uint32_t clk, uint8_t raF, bool snF)
 {
   __IO static uint8_t cmd[16] = {0};
 
@@ -228,7 +228,7 @@ void Emm_V5_Pos_Control(uint8_t addr, uint8_t dir, uint16_t vel, uint8_t acc, ui
   cmd[12] =  0x6B;                      // 校验字节
   
   // 发送命令
-  HAL_UART_Transmit_DMA(&huart_emm, (uint8_t *)cmd, 13);
+  return HAL_UART_Transmit_DMA(&huart_emm, (uint8_t *)cmd, 13);
 }
 
 /**

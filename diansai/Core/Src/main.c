@@ -127,26 +127,19 @@ int main(void)
 	back_to_zero();
 	HAL_Delay(5000);
 	
-	Step_abs_pos(130);
-	HAL_Delay(410);
+	Step_abs_pos(122);
+	HAL_Delay(400);
 	
 	Step_abs_pos(-80);
 	HAL_Delay(400);
-	Step_abs_pos(-62);
+	Step_abs_pos(-72);
 	HAL_Delay(300);
 	Step_abs_pos(-50);
-	HAL_Delay(250);
+	HAL_Delay(260);
 	
 	Step_abs_pos(4);
+	HAL_Delay(1460);
 	
-	HAL_Delay(1460);//1660
-//	Step_abs_pos(-110);
-//	HAL_Delay(2200);
-	
-	
-	
-	
-//	HAL_Delay(10000);
   while (1)
   {
     /* USER CODE END WHILE */
@@ -166,11 +159,12 @@ int main(void)
 	 if(p_time_flag->t_16_ms_flag){
 		 p_time_flag->t_16_ms_flag=0;
 		// ball_position();
-		 	open_control();
 
 	 }
 	 if(p_time_flag->t_30_ms_flag){
 		 p_time_flag->t_30_ms_flag=0;
+		 		 	open_control();
+
 
 	 }
 	 if(p_time_flag->t_500_ms_flag){

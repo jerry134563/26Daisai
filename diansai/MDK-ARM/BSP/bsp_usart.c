@@ -14,6 +14,7 @@ volatile float ACC_y=0;
 volatile float ACC_z=0;
 volatile uint16_t ball_x=0;
 volatile uint16_t ball_y=0;
+uint8_t u5_err=0;
 
 /* 格式化输出缓冲区 */
 static unsigned char s_uart_tx_buf[300];
@@ -129,6 +130,7 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 	{
      HAL_UARTEx_ReceiveToIdle_DMA(&huart2, s_rx_buf_u2, UART_RX_BUF_SIZE);
 	}
+
 
 	__HAL_UART_CLEAR_OREFLAG(huart); 
 	__HAL_UART_CLEAR_FEFLAG(huart);
