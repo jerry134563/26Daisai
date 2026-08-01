@@ -32,6 +32,7 @@
 #include "line_tracking.h"
 #include "ball_control.h"
 #include "Oled_show.h"
+#include "forward.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -130,7 +131,7 @@ int main(void)
 	
 	HAL_Delay(800);
 	back_to_zero();
-	HAL_Delay(5000);
+	HAL_Delay(3000);
 
   while (1)
   {
@@ -144,37 +145,37 @@ int main(void)
 	 if(p_time_flag->t_5_ms_flag)
 	 {
 			p_time_flag->t_5_ms_flag=0;
-		  if(*get_KEY1_Push_flag())
+		  if(*task_num_addr()==2)		//ÈÎÎñ2
 			{
-				*tick_mode_addr() = 1;
-				* task_num_addr() = 2;
 				static uint8_t count=0;
 				if(count==0)
 				{
-				  HAL_Delay(1000);//ç­‰å¾…æ‰‹æŠ¬èµ?
+				  HAL_Delay(1000);
 					count=1;
 				}
 				tracking_line();			
 			}
+			else if(*task_num_addr()==4)
+			{
+			  A_to_B_tracking_line();
+			
+			}
 	 }
 	 if(p_time_flag->t_16_ms_flag){
 		 p_time_flag->t_16_ms_flag=0;
-		// ball_position();
 
 	 }
 	 if(p_time_flag->t_30_ms_flag){
 		 p_time_flag->t_30_ms_flag=0;
-	      if(*get_KEY3_Push_flag())	 
+	      if(*task_num_addr()==3)	 //ÈÎÎñ3
 		 		{
-					*tick_mode_addr() = 1;
-					* task_num_addr() = 3;
 					static uint8_t count=0;
 					if(count==0)
 					{
 						ball_first_step();
 						count=1;
 					}
-					open_control();//ç»“æŸé€»è¾‘è¿˜æ²¡æœ‰å†™get_KEY2_Push_flagä¹Ÿè¦=0;
+					open_control();
 				}
 	 }
 	 if(p_time_flag->t_500_ms_flag){
