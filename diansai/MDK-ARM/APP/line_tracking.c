@@ -42,8 +42,9 @@ uint8_t tracking_line(void)
 										 dc_motorL_brake();
 										 dc_motorR_brake();
 										 dc_motor_on(0,0);
-										 *get_KEY1_Push_flag()=0;
+										 
 										 complete_line_track_flag=1;
+										 HAL_Delay(1000);
 										 return 1;
 									 }
 							 }

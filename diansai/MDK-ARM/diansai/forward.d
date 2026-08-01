@@ -57,3 +57,5 @@ diansai\forward.o: ./Module/Module_H/mpu6050.h
 diansai\forward.o: ./ATK_MS6050/atk_ms6050.h
 diansai\forward.o: ./ATK_MS6050/eMPL/inv_mpu.h
 diansai\forward.o: ./Module/Module_H/Emm_V5.h
+diansai\forward.o: ./APP/APP_H/ball_control.h
+diansai\forward.o: ./Alg/ALG_H/pid.h

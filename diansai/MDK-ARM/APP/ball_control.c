@@ -58,7 +58,7 @@ void open_control(void)
 {
 	 HAL_StatusTypeDef ret;
 	  count++;
-   if(1)//(get_ball_x()<=g__5cm_x)
+   if(get_ball_x()<=g__5cm_x)
 	 {
 		   if(down_flag!=1)
 			 {
@@ -110,7 +110,17 @@ void ball_first_step(void)
 
 }
 
-
+void forward_open_control(void)
+{
+     if(get_ball_x()<=zore_x)
+	 {
+		 Step_up(30+get_Acc_x()*50);
+	 }
+	 else
+	 {
+   Step_down(25+get_Acc_x()*50);
+	 }
+}
 
 
 

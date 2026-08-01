@@ -8,6 +8,7 @@ void ball_control_init(void);
 void ball_position(void);
 void open_control(void);
 void ball_first_step(void);
+void forward_open_control(void);
 
 
 

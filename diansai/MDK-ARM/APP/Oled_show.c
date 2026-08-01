@@ -13,6 +13,7 @@ uint8_t* tick_mode_addr(void){
 }
 uint8_t tick_mode_start = 0;
 
+uint8_t task_choose_num = 0;
 uint8_t task_num = 0;
 uint8_t* task_num_addr(void){
 	return &task_num;
@@ -20,9 +21,25 @@ uint8_t* task_num_addr(void){
 
 void oled_show(void)
 {
+	if(*get_KEY1_Push_flag()){//!!!!!!!È·ÈÏ¼ü
+		task_num = task_choose_num;
+		tick_mode = 1;
+	}
+	if(*get_KEY3_Push_flag()){		//µÝ¼õ¼ü
+		if(task_choose_num==0){task_choose_num = 6;}
+		else{task_choose_num -=1;}
+	}
+	if(*get_KEY4_Push_flag()){		//µÝÔö¼ü
+		if(task_choose_num==6){task_choose_num=0;}
+		else{task_choose_num +=1;}
+	}
+	test_key();
+	
+	
 		switch(task_num){
-			case 2: if(get_complete_line_track_flag()){tick_mode = 0;}break;
+			case 2: if(get_complete_line_track_flag()){tick_mode = 0;task_num = 0;}break;
 			case 3:break;
+			case 4:break;
 			default:break;
 		}
 	
@@ -45,7 +62,9 @@ void oled_show(void)
 		case 0:
 			OLED_Clear();
 		
-			OLED_ShowString(0,0,"waiting",OLED_8X16);
+		OLED_ShowString(0,0,"task_choose:",OLED_8X16);
+		
+		OLED_ShowNum(16,16,task_choose_num,1,OLED_8X16);
 		
 			OLED_Update();
 			
@@ -55,11 +74,17 @@ void oled_show(void)
 			OLED_Clear();
 			OLED_ShowString(0,0,"time_seconds",OLED_8X16);
 		
-		if(tick_cnt>40)tick_cnt = 40;
+		switch(task_choose_num){
+			case 2:if(tick_cnt>40){tick_cnt = 40;}break;
+			case 3:if(tick_cnt>10){tick_cnt = 10;tick_mode = 0;task_num = 0;}break;
+			case 4:if(tick_cnt>16){tick_cnt = 16;tick_mode = 0;task_num = 0;}break;
+			default :break;
+		}
+		
 			OLED_ShowNum(16,16,tick_cnt/2,3,OLED_8X16);
-			
+		
 		OLED_ShowString(0,40,"task:",OLED_8X16);
-		OLED_ShowNum(40,40,task_num,3,OLED_8X16);
+		OLED_ShowNum(40,40,task_choose_num,3,OLED_8X16);
 		
 		OLED_UpdateArea(0,0,56,56);
 			OLED_Update();	
