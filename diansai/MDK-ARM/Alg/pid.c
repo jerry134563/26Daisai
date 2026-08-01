@@ -23,7 +23,7 @@ void pid_init(PidController_t *pid, float kp, float ki, float kd, int16_t out_ma
 }
 
 int16_t pid_calculate(PidController_t *pid, float target_value, float feedback_value,
-                      float output_dead_zone, float i_clear_zone)
+                      float output_dead_zone, float i_clear_zone,float i_out_max )
 {
     float error;
 
@@ -45,10 +45,10 @@ int16_t pid_calculate(PidController_t *pid, float target_value, float feedback_v
     pid->i_out += pid->ki * error;
 
     /* �������޷� [-50, +50] */
-    if (pid->i_out > 50.0f) {
-        pid->i_out = 50.0f;
-    } else if (pid->i_out < -50.0f) {
-        pid->i_out = -50.0f;
+    if (pid->i_out > i_out_max) {
+        pid->i_out = i_out_max;
+    } else if (pid->i_out < -i_out_max) {
+        pid->i_out = i_out_max;
     }
 
     /* ������������ʱ������� */

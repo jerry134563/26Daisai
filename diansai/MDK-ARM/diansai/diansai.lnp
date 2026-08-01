@@ -21,6 +21,7 @@
 "diansai\line_tracking.o"
 "diansai\ball_control.o"
 "diansai\oled_show.o"
+"diansai\forward.o"
 "diansai\pid.o"
 "diansai\atk_ms6050.o"
 "diansai\atk_ms6050_iic.o"

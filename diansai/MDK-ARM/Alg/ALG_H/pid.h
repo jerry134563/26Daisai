@@ -23,7 +23,7 @@ typedef struct {
 void pid_init(PidController_t *pid, float kp, float ki, float kd, int16_t out_max);
 
 int16_t pid_calculate(PidController_t *pid, float target_value, float feedback_value,
-                      float output_dead_zone, float i_clear_zone);
+                      float output_dead_zone, float i_clear_zone,float i_out_max );
 int16_t pid_calculate_increment(PidController_t *pid,
                                 float target_value,
                                 float feedback_value,

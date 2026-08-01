@@ -104,6 +104,7 @@ int main(void)
   MX_UART5_Init();
   MX_TIM7_Init();
   MX_USART2_UART_Init();
+  MX_UART4_Init();
   /* USER CODE BEGIN 2 */
 	bsp_timer_init();
 	bsp_usart_init();
@@ -129,8 +130,8 @@ int main(void)
 	
 	HAL_Delay(800);
 	back_to_zero();
+	HAL_Delay(5000);
 
-	
   while (1)
   {
     /* USER CODE END WHILE */
@@ -158,11 +159,12 @@ int main(void)
 	 }
 	 if(p_time_flag->t_16_ms_flag){
 		 p_time_flag->t_16_ms_flag=0;
+		// ball_position();
 
 	 }
 	 if(p_time_flag->t_30_ms_flag){
 		 p_time_flag->t_30_ms_flag=0;
-	      if(*get_KEY2_Push_flag())	 
+	      if(*get_KEY3_Push_flag())	 
 		 		{
 					*tick_mode_addr() = 1;
 					* task_num_addr() = 3;

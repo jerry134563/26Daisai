@@ -24,7 +24,7 @@ void bsp_usart_init(void)
 {
    HAL_UARTEx_ReceiveToIdle_DMA(&huart8, s_rx_buf_u8, UART_RX_BUF_SIZE);
 	 HAL_UARTEx_ReceiveToIdle_DMA(&huart7, s_rx_buf_u7, UART_RX_BUF_SIZE);
-	 HAL_UARTEx_ReceiveToIdle_DMA(&huart2, s_rx_buf_u2, UART_RX_BUF_SIZE);  
+	 HAL_UARTEx_ReceiveToIdle_DMA(&huart4, s_rx_buf_u2, UART_RX_BUF_SIZE);  
 
 	__HAL_UART_CLEAR_IDLEFLAG(&huart5); 											// 清除IDLE标志
 	__HAL_UART_ENABLE_IT(&huart5, UART_IT_IDLE); 							// 使能串UART1 IDLE中断
@@ -88,16 +88,15 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 	 }
       HAL_UARTEx_ReceiveToIdle_DMA(&huart7, s_rx_buf_u7, UART_RX_BUF_SIZE);  
    }
-	if(huart== &huart2)
+	if(huart== &huart4)
 	 {
 	   
-		 if(s_rx_buf_u2[0]==0xfe&&s_rx_buf_u2[5]==0xff)
+		 if(s_rx_buf_u2[0]==0xff&&s_rx_buf_u2[1]==0xfe)
 		 {
-		   ball_x=((uint16_t)s_rx_buf_u2[2]<<8)|s_rx_buf_u2[1];
-			 ball_y=((uint16_t)s_rx_buf_u2[4]<<8)|s_rx_buf_u2[3];
+		   ball_x=s_rx_buf_u2[2];
 		 }
 		 
-		 HAL_UARTEx_ReceiveToIdle_DMA(&huart2, s_rx_buf_u2, UART_RX_BUF_SIZE);  
+		 HAL_UARTEx_ReceiveToIdle_DMA(&huart4, s_rx_buf_u2, UART_RX_BUF_SIZE);  
 	 }	 
   }
 
@@ -126,9 +125,9 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
 	{
      HAL_UARTEx_ReceiveToIdle_DMA(&huart8, s_rx_buf_u8, UART_RX_BUF_SIZE);
 	}
-		else if(huart== &huart2)
+		else if(huart== &huart4)
 	{
-     HAL_UARTEx_ReceiveToIdle_DMA(&huart2, s_rx_buf_u2, UART_RX_BUF_SIZE);
+     HAL_UARTEx_ReceiveToIdle_DMA(&huart4, s_rx_buf_u2, UART_RX_BUF_SIZE);
 	}
 
 

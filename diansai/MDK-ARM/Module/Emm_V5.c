@@ -1737,14 +1737,14 @@ void Emm_V5_MMCL_Read_Sys_Params(uint8_t addr, SysParams_t s)
 
 
 /* 封装简易命令 */
-#define rpm 25
+#define rpm 10
 void Step_up(uint16_t clk){
 	if(clk>150)clk = 150;
 	Emm_V5_Pos_Control(3, 1, rpm, 0, clk, 1, 0);
 }
 //  * @param    addr,dir,vel,acc,clk,raF(1为绝对值运动),snF
 void Step_down(uint16_t clk){
-	if(clk>150)clk = 150;
+	if(clk>180)clk = 180;
 	Emm_V5_Pos_Control(3, 0, rpm, 0, clk, 1, 0);
 }
 void Step_abs_pos(int16_t clk){
