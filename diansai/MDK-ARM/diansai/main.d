@@ -67,3 +67,4 @@ diansai\main.o: ./Module/Module_H/OLED_Data.h
 diansai\main.o: ./Module/Module_H/OLED.h
 diansai\main.o: ./ATK_MS6050/delay.h
 diansai\main.o: ./APP/APP_H/forward.h
+diansai\main.o: .\APP\five.h

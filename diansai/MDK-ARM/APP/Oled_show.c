@@ -1,5 +1,5 @@
 #include "Oled_show.h"
-
+#include "Emm_V5.h"
 uint32_t tick_cnt = 0;
 
 int8_t oled_show_choose = 0;
@@ -76,7 +76,12 @@ void oled_show(void)
 		
 		switch(task_choose_num){
 			case 2:if(tick_cnt>40){tick_cnt = 40;}break;
-			case 3:if(tick_cnt>10){tick_cnt = 10;tick_mode = 0;task_num = 0;}break;
+			case 3:if(tick_cnt>10){
+				tick_cnt = 10;tick_mode = 0;task_num = 0;
+				back_to_zero();
+
+				
+			}break;
 			case 4:if(tick_cnt>16){tick_cnt = 16;tick_mode = 0;task_num = 0;}break;
 			default :break;
 		}

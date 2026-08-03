@@ -33,6 +33,7 @@
 #include "ball_control.h"
 #include "Oled_show.h"
 #include "forward.h"
+#include "five.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -157,10 +158,27 @@ int main(void)
 			}
 			else if(*task_num_addr()==4)
 			{
-			  A_to_B_tracking_line();
+				static uint8_t count2=0;
+				if(count2==0)
+				{
+				  HAL_Delay(1000);
+					count2=1;
+				}			
+			  A_to_B_tracking_line();			
+			}
+//			else if(*task_num_addr()==5)
+//			{
+//			  static uint8_t count3=0;
+//				if(count3==0)
+//				{
+//				  HAL_Delay(1000);
+//					count3=1;
+//				}			
+//			  A_tracking_line();			
+//			}
 			
 			}
-	 }
+	 
 	 if(p_time_flag->t_16_ms_flag){
 		 p_time_flag->t_16_ms_flag=0;
 
